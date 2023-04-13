@@ -20,13 +20,19 @@ select district from sakila.address where district like 'K%' '%a' and district n
 ```sql
 select * from sakila.payment where payment_date between '2005-06-15 00:00:00' and '2005-06-19 00:00:00' and amount >= 10 order by payment_date;
 ```
-![12-3-2](./hw-12-3/12-3-1.png)
+![12-3-2](./hw-12-3/12-3-2.png)
 
 ---
 
 ### Задание 3
 
 Получите последние пять аренд фильмов.
+```sql
+select * from sakila.rental order by rental_date desc limit 5;
+```
+![12-3-3](./hw-12-3/12-3-3.png)
+
+---
 
 ### Задание 4
 
