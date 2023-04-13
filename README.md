@@ -64,7 +64,7 @@ from sakila.customer;
 ```sql
 select 
 CONCAT(left(substr(email, 1, position('@' in email)-1),1), LOWER(substr(email, 2, position('@' in email)-1))) as 'part_before_@',
-CONCAT(UPPER(left(substr(email, position('@' in email)+1),1)), LOWER(substr(email, 2, position('@' in email)+1))) as 'part_after_@'
+CONCAT(UPPER(left(substr(email, position('@' in email)+1),1)), LOWER(substr(email, 2, position('@' in email)+2))) as 'part_after_@'
 from sakila.customer;
 ```
 ![12-3-6](./hw-12-3/12-3-6.png)
