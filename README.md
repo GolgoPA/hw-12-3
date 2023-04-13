@@ -54,6 +54,12 @@ where active = 1 and (first_name = 'Kelly' or first_name = 'Willie');
 ### Задание 5*
 
 Выведите Email каждого покупателя, разделив значение Email на две отдельных колонки: в первой колонке должно быть значение, указанное до @, во второй — значение, указанное после @.
+```sql
+select substr(email, 1, position('@' in email)-1) as 'part_before_@', substr(email, position('@' in email)+1) as 'part_after_@'
+from sakila.customer;
+```
+![12-3-5](./hw-12-3/12-3-5.png)
+---
 
 ### Задание 6*
 
