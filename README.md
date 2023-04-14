@@ -8,7 +8,7 @@
 
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a” и не содержат пробелов.
 ```sql
-select district from sakila.address where district like 'K%' '%a' and district not like '% %';
+select district from sakila.address where district like 'K%' and district like '%a' and district not like '% %';
 ```
 ![12-3-1](./hw-12-3/12-3-1.png)
 
